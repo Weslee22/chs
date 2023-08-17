@@ -1,0 +1,420 @@
+<html lang="en">
+<head>
+<title>Clover Health Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/Style1.css">
+<link rel="stylesheet" href="css/black-dashboard.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbotstyle.css">
+
+
+  <style>
+      body,h1,h2,h3,h4,h5,h6 {
+        font-family: "Raleway", sans-serif
+      }
+
+      body, html {
+        height: 100%;
+        line-height: 1.8;
+        
+      }
+
+      .bar .button {
+        padding: 16px;
+      }
+
+      p {
+        color: black;
+      }
+
+  </style>
+  <script src="js/sidebar.js"></script>
+  
+</head>
+<body>
+  
+
+<!--top icons -->
+<div class="top">
+  <div class="bar white card" id="myNavbar">
+    <a href="index.html" class="bar-item button wide">Clover Health Services</a>
+    <!-- Rightside navbar links -->
+    <div class="right hide-small">
+      <a style="background-color: #ccc;" href="index.html" class="bar-item button"><i class="fa fa-home"></i> HOME</a>
+      <a href="#job" class="bar-item button"><i class="fa fa-user"></i> JOBS</a>
+      <a class="bar-item button"><i class="fa fa-th"></i> SERVICES</a>
+      <a class="bar-item button"><i class="fa fa-usd"></i> RESOURCES</a>
+      <a href="#contact" class="bar-item button"><i class="fa fa-envelope"></i> CONTACT US</a>
+      <a href="#about" class="bar-item button"><i class="fa fa-handshake-o"></i> ABOUT US</a>
+      <button onclick="document.getElementById('id04').style.display='block'" class="bar-item button" style="color: red;">
+        <i class="fa fa-briefcase"></i> LOGIN/SIGNUP</button>
+    </div>
+
+    <!-- Hide links and open sidebar -->
+    <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="sb_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Login page modal-->
+  <div id="id04" class="modal">
+    <div class="modal-content card-4 animate-zoom" style="max-width:600px">
+
+      <div class="center"><br>
+        <span onclick="document.getElementById('id04').style.display='none'" class="button xlarge display-topright"
+         title="Close Modal">&times;</span>
+        <h3>Login</h3>
+      </div>
+      <form class="container" action="dashboard.html">
+        <div class="section" style="text-align: center;">
+          <label><b>Username</b></label>
+          <input class="input border margin-bottom" type="text" placeholder="Enter Username"><br>
+          <label><b>Password</b></label>
+          <input class="input border " type="password" placeholder="Enter Password"><br>
+          <button class="button black section padding" type="submit">Login</button><br>
+          <input type="checkbox" checked> Remember me <br>
+          Don't have account,<a style="text-decoration: underline;cursor: pointer;color: darkviolet;" onclick="document.getElementById('id04').style.display='none';document.getElementById('id05').style.display='block'">sign up</a>
+        </div>
+      </form>
+      <div class="container border-top light-grey" style="text-align: center;">
+        <button onclick="document.getElementById('id04').style.display='none'"  type="button" class="button">
+          Cancel</button>
+        <!--<span class="right padding hide-small">Forgot <a href="#">password?</a></span>-->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Register modal-->
+  <div id="id05" class="modal">
+    <div class="modal-content card-4 animate-zoom" style="max-width:600px;border-radius: 4%;">
+  
+      <div class="center"><br>
+        <span onclick="document.getElementById('id05').style.display='none'" class="button xlarge transparent display-topright" 
+        title="Close Modal">×</span>
+        <h3>Register Now</h3>
+      </div>
+      <form class="container">
+        <div class="section" style="text-align: center;">
+          <input class="input border" type="text" placeholder="First Name">
+          <input class="input border" type="text" placeholder="Last Name"><br>
+          <input class="input border" type="text" placeholder="Email">
+          <input class="input border" type="text" placeholder="Phone Number"><br>
+          <button onclick="document.getElementById('id05').style.display='none';" 
+          class="button section padding black" type="button">Register Now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<!-- Sidebar on small screens -->
+<nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none" id="mySidebar">
+  <a style="background-color: #ccc;" href="index.html" class="bar-item button"><i class="fa fa-home"></i> HOME</a>
+      <a href="#job" class="bar-item button"><i class="fa fa-user"></i> JOBS</a>
+      <a class="bar-item button"><i class="fa fa-th"></i> SERVICES</a>
+      <a class="bar-item button"><i class="fa fa-usd"></i> RESOURCES</a>
+      <a href="#contact" class="bar-item button"><i class="fa fa-envelope"></i> CONTACT US</a>
+      <a href="#about" class="bar-item button"><i class="fa fa-handshake-o"></i> ABOUT US</a>
+      <button onclick="document.getElementById('id04').style.display='block'" class="bar-item button">
+        <i class="fa fa-briefcase"></i> LOGIN/SIGNUP</button>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="display-container" id="home">
+  <div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-lg-3 col-sm-6">
+            <div class="card gradient-1">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Jobs Available</h3>
+                    <div class="d-inline-block">
+                        <h2 class="text-white" style="font-family: 'Times New Roman', Times, serif;">25065</h2>
+                        <a class="text-white mb-0" href="#job">See Jobs Available</a>
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-briefcase"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card gradient-2">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Placed Nurses</h3>
+                    <div class="d-inline-block">
+                        <h2 class="text-white" style="font-family: 'Times New Roman', Times, serif;">15000+</h2>
+                        <p class="text-white mb-0">Join Our Team</p>
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-stethoscope"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card gradient-3">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Locations</h3>
+                    <div class="d-inline-block">
+                        <h2 class="text-white" style="font-family: 'Times New Roman', Times, serif;">125+</h2>
+                        <p class="text-white mb-0">Visit Locations</p>
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-users"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+            <div class="card gradient-4">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Profession</h3>
+                    <div class="d-inline-block">
+                        <h2 class="text-white">30+</h2>
+                        <p class="text-white mb-0">See Profession</p>
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-heart"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+
+<div class="col-lg-12 col-md-12" style="margin-left: 5px;" id="job">
+  <div class="card card-tasks">
+    <div class="card-header ">
+      <h3><b>Apply for a Job</b></h3>
+    </div>
+    <div class="card-body">
+      <div class="table-full-width table-responsive">
+        <table class="table">
+          <tbody>
+            <tr>
+              <input type="text" placeholder="Certification" style="margin-left: 350px;margin-bottom: 10px;">
+              <input type="text" placeholder="specialty" style="margin-left: 20px;margin-bottom: 10px;">
+              <input type="text" placeholder="State" style="margin-left: 20px;margin-bottom: 10px;"><br>
+              <input type="text" placeholder="City" style="margin-left: 450px;margin-bottom: 10px;">
+              <input type="text" placeholder="Zip" style="margin-left: 20px;margin-bottom: 10px;"><br>
+              <input type="button" value="Search Jobs" style="margin-left: 580px;">
+
+            </tr>
+            <tr>
+              <td>
+                
+              </td>
+              <td>
+                <h5><b>Cath Lab Tech Job</b></h5>
+                <p class="text-muted">Description, Dwuamish Head, Seattle, WA 8:47 AM</p>
+              </td>
+              <td class="td-actions text-right">
+              <button class="td-actions text-right" onclick="document.getElementById('id01').style.display='block'"> <i class="icon-pencil button black">Apply now</i></button>
+                 
+              </td>
+            </tr>
+            <tr>
+              <td>
+                
+              </td>
+              <td>
+                <h5><b>ARP Healthcare Clinic</b></h5>
+                <p class="text-muted">Description, Dwuamish Head, Seattle, WA 8:47 AM</p>
+              </td>
+              <td class="td-actions text-right">
+                <button class="td-actions text-right" onclick="document.getElementById('id01').style.display='block'"> <i class="icon-pencil button black">Apply now</i></button>
+                   
+                </td>
+            </tr>
+            <tr>
+              <td>
+
+              </td>
+              <td>
+                <h5><b>VK Hospital</b></h5>
+                <p class="text-muted">Description, Dwuamish Head, Seattle, WA 8:47 AM</p>
+              </td>
+              <td class="td-actions text-right">
+                <button class="td-actions text-right" onclick="document.getElementById('id01').style.display='block'"> <i class="icon-pencil button black">Apply now</i></button>
+                   
+                </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="display: flex;">
+
+
+<div style="width: 48%;border-radius: 6px;margin-left: 25px;background-color: lightblue;height: 10%;"><br>
+  <h4 style="margin-left: 30px;"><b>Jobs for States</b>
+  
+    <div class="btn-group btn-group-toggle float-right" data-toggle="buttons" style="margin-right: 60px;">
+      <label class="btn btn-sm btn-primary btn-simple active" id="1">
+        <input type="radio" name="options" checked>
+        <span>States</span>
+    </div>
+
+  </h4>
+  
+  <span style="text-align: right;"></span>
+  <div style="width: 90%;margin-left: 20px;">
+    <canvas id="statechart" width="400" height="200"></canvas>
+  </div>
+</div>
+
+  <div style="width: 48%;border-radius: 6px;margin-bottom: 30px;margin-left: 10px;background-color: lightblue;height: 100%;"><br>
+    <h4 style="margin-left: 30px;"><b>Jobs for Profession</b>
+    
+      <div class="btn-group btn-group-toggle float-right" style="margin-right: 60px;">
+        <label class="btn btn-sm btn-primary btn-simple active">
+          <input type="radio" name="options" checked>
+          <span>Profession</span>
+      </div>
+  
+    </h4>
+    <span style="text-align: right;"></span>
+    <div style="width: 90%;margin-left: 20px;">
+      <canvas id="professionchart" width="400" height="200"></canvas>
+    </div>
+  </div>
+
+</div>
+
+</header>
+
+<!-- About Section -->
+<div class="containers" style="padding:128px 16px" id="about">
+  <h3 class="center">ABOUT THE COMPANY</h3>
+  <p class="center large">Key features of our company</p>
+  <div class="row-padding center" style="margin-top:64px;">
+    <div class="quarter pad">
+      <p class="large">Travel Nurse Staffing</p>
+      <p class="justify">Clover Health Services is a dynamic provider of travel nurse staffing services. Our Corporate staffs are the finest in the industry and are committed to paying attention to details when it comes to client requirements. </p>
+    </div>
+    <div class="quarter pad">
+      <p class="large">Who we are?</p>
+      <p class="justify">The demand for travel nurses is picking up as many hospitals are having a tough time providing quality patient care with limited resources. On the other end, we have experienced nurses with a passion to provide superior care. </p>
+    </div>
+    <div class="quarter pad">
+      <p class="large">Why are we different?</p>
+      <p class="justify">We know first-hand about the desperations of nurse-cancelled shifts or the complications due to shortage of resources that hospitals face. This understanding has enabled us to develop an integrated system that ensures a holistic healthcare experience for facilities.</p>
+    </div>
+    <div class="pad">
+      <p class="large">Our Approach</p>
+      <p class="justify">Account Managers acquire job orders from Hospital. Our recruiters find appropriate nurses according to specialty and placements are done aligned with the client jobs at facilities across the nation.</p>
+    </div>
+  </div>
+</div>
+
+<!-- apply job form modal-->
+  <div id="id01" class="modal">
+    <div class="modal-content card-4 animate-zoom" style="width: 80%;height: 80%;">
+  
+      <div class="center"><br>
+        <span onclick="document.getElementById('id01').style.display='none'" class="button xlarge transparent display-topright" 
+        title="Close Modal">×</span>
+        <h3>Apply for this job!</h3>
+      </div>
+
+      <div style="display: flex;">
+
+        <div style="width: 50%;margin-left: 20px;"> 
+          <h3 style="text-align: center;">Cath Lab Tech Job in Lexington, KY</h3>
+          <div style="display: flex;">
+          <p><b>Location: </b>Lexington, KY</p>
+          <p style="margin-left: 80px;"><b>Shift Details: </b>9AM - 6PM </p>
+          </div>
+          <p>You must have a Nursing License and at least 2 years of recent experience as a Registered 
+            Nurse in said specialty you are <br>
+          The Catherization Labratory Tech assists doctors during invasive cardiovascular procedures 
+            such as cardiac catheterization. Circulating for supplies to assist during procedure and monitoring 
+             the patient's hemodynamic status during the procedure.</p>
+        </div>
+        <form class="right" style="margin-left: 100px;">
+          <div class="section" style="text-align: center;background-color: #ccc;border-radius: 6px;height: 80%;">
+            <h4>Apply Job</h4>
+            <input class="input border" type="text" placeholder="First Name" style="margin-top: 20px;">
+            <input class="input border" type="text" placeholder="Last Name"><br>
+            <input class="input border" type="text" placeholder="Email">
+            <input class="input border" type="text" placeholder="Phone Number"><br>
+            <input class="input border" type="file" ><br><br>
+            
+          </div>
+        </form> 
+      </div>
+      <button style="float: right;margin-right: 20px;"  onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='block'" 
+        class="button padding black">Apply job</button>
+    </div>
+  </div>
+
+  <!-- job apply confirmation message modal-->
+  <div id="id02" class="modal">
+    <div class="modal-content card-4 animate-zoom" style="max-width:600px;border-radius: 4%;min-height: 50%;">
+  
+      <div class="center"><br>
+        <span onclick="document.getElementById('id02').style.display='none'" class="button xlarge transparent display-topright" title="Close Modal">×</span>
+        <br>
+        <h3><i class="fa fa-check xxlarge"></i>Thanks for applying the job</h3><br>
+        <h4>You will receive the temporary password in the mail</h4><br>
+        <h4><b>Use your email and password for login</b></h4>
+        <br>
+        <button class="button black" onclick="document.getElementById('id02').style.display='none'">Close</button>
+      </div>
+    </div>
+  </div>
+
+<!-- Contact Section -->
+<div class="container" style="padding:128px 16px" id="contact">
+  <h3 class="center">CONTACT</h3>
+  <p class="center large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px;text-align: center;">
+    
+    <form target="_blank">
+      <input class="input border" type="text" placeholder="First Name">
+      <input class="input border" type="text" placeholder="Last Name"><br>
+      <input class="input border" type="text" placeholder="Phone">
+      <input class="input border" type="text" placeholder="Email"><br>
+      <input class="input border" type="text" placeholder="Message"><br><br>
+
+      <p>
+        <button onclick="document.getElementById('id03').style.display ='block'" class="button black" type="button">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    
+  </div>
+</div>
+<!-- Contact us confirmation message-->
+<div id="id03" class="modal">
+  <div class="modal-content card-4 animate-zoom" style="max-width:600px;border-radius: 4%;min-height: 50%;">
+
+    <div class="center"><br>
+      <span onclick="document.getElementById('id03').style.display='none'" class="button xlarge transparent display-topright" title="Close Modal">×</span>
+      <h3><i class="fa fa-check xxlarge"></i>Thanks for contacting us</h3>
+      <h4>We will reach you soon</h4><br><br>
+      <button class="button black" onclick="document.getElementById('id03').style.display='none'">Close</button>
+
+    </div>
+  </div>
+</div>
+
+<button id="chatbot" class="buttonn" onclick="toggleChatbotPopup()">Chat</button>
+
+    <div id="chatbotPopup">
+        <div id="chatlog"></div>
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script src="js/chatbot.js"></script>
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/myChart.js"></script>
+
+    
+
+</body>
+</html>

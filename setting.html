@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Portal</title>
+    <link rel="stylesheet" href="css/Style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {
+          font-family: "Raleway", sans-serif
+        }
+  
+        body, html {
+          height: 100%;
+          line-height: 1.8;
+        }
+  
+        .bar .button {
+          padding: 16px;
+        }
+  
+    </style>
+</head>
+<body>
+    <!--top icons -->
+<div class="top" style="height: 100%;">
+    <div class="bar white card" id="myNavbar">
+        <a href="index.html" class="bar-item button wide">Clover Health Services</a>
+        <!-- Rightside navbar links -->
+        <div class="right hide-small">
+            <a href="index.html" class="bar-item button"><i class="fa fa-home"></i> HOME</a>
+            <a class="bar-item button"><i class="fa fa-bell"></i> ALERTS</a>
+            <a style="background-color: #ccc;" href="profile.html" class="bar-item button"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a>
+        </div>
+        <!-- Hide links and open sidebar -->
+        <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="sb_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div style="display: flex;">
+
+        <div class="hide-small bar-block" style="width: 15%;background-color: #f2f2f2;overflow: hidden;">
+          <a href="dashboard.html" class="bar-item button pad"><i class="fa fa-dashboard"></i> DASHBOARD</a>
+      <a href="profile.html" class="bar-item button pad"><i class="fa fa-user"></i> PROFILE</a>
+      <a href="job.html" class="bar-item button pad"><i class="fa fa-briefcase"></i> JOBS</a>
+      <a href="application.html" class="bar-item button pad"><i class="fa fa-th"></i> APPLICATIONS </a>
+      <a href="documents.html" class="bar-item button pad"><i class="fa fa-file"></i> DOCUMENTS</a>
+      <a href="placement.html" class="bar-item button pad"><i
+              class="fa fa-graduation-cap"></i> PLACEMENT</a>
+      <a href="timesheet.html" class="bar-item button pad"><i class="fa fa-id-card"></i> TIMESHEET</a>
+      <a href="payroll.html" class="bar-item button pad"><i class="fa fa-dollar"></i> PAYROLL</a>
+      <a href="referral.html" class="bar-item button pad"><i class="fa fa-money"></i> REFERRAL</a>
+      <a style="background-color: #ccc;" href="setting.html" class="bar-item button pad"><i class="fa fa-gear"></i> SETTINGS</a>
+      <a href="index.html" class="bar-item button pad"><i class="fa fa-sign-out"></i> LOG OUT</a>
+        </div>
+
+        <!-- Sidebar on small screens -->
+        <nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none" id="mySidebar">
+          <a href="dashboard.html" class="bar-item button pad"><i class="fa fa-dashboard"></i> DASHBOARD</a>
+      <a href="profile.html" class="bar-item button pad"><i class="fa fa-user"></i> PROFILE</a>
+      <a href="job.html" class="bar-item button pad"><i class="fa fa-briefcase"></i> JOBS</a>
+      <a href="application.html" class="bar-item button pad"><i class="fa fa-th"></i> APPLICATIONS </a>
+      <a href="documents.html" class="bar-item button pad"><i class="fa fa-file"></i> DOCUMENTS</a>
+      <a href="placement.html" class="bar-item button pad"><i
+              class="fa fa-graduation-cap"></i> PLACEMENT</a>
+      <a href="timesheet.html" class="bar-item button pad"><i class="fa fa-id-card"></i> TIMESHEET</a>
+      <a href="payroll.html" class="bar-item button pad"><i class="fa fa-dollar"></i> PAYROLL</a>
+      <a href="referral.html" class="bar-item button pad"><i class="fa fa-money"></i> REFERRAL</a>
+      <a href="setting.html" class="bar-item button pad"><i class="fa fa-gear"></i> SETTINGS</a>
+      <a href="index.html" class="bar-item button pad"><i class="fa fa-sign-out"></i> LOG OUT</a>
+        </nav>
+
+        <div style="margin-left: 20px;flex: 1;">
+            <h3>SETTINGS</h3>
+            <button class="button black large" onclick="document.getElementById('id05').style.display='block'" type="button"><i class="fa fa-user"></i> Update password</button><br><br>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Update password modal-->
+<div id="id05" class="modal">
+    <div class="modal-content card-4 animate-zoom" style="max-width:600px;border-radius: 4%;">
+  
+      <div class="center"><br>
+        <span onclick="document.getElementById('id05').style.display='none'" class="button xlarge transparent display-topright" 
+        title="Close Modal">×</span>
+        <h3>Update password</h3>
+      </div>
+      <form class="container">
+        <div class="section" style="text-align: center;">
+          <input class="input border margin-bottom" type="text" placeholder="Current password"><br>
+          <input class="input border margin-bottom" type="text" placeholder=" New password"><br>
+          <input class="input border" type="text" placeholder="Confirm new password"><br>
+          <button onclick="document.getElementById('id05').style.display='none';" 
+          class="button section padding black" type="button"> Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Notification settings modal-->
+<div id="id06" class="modal">
+    <div class="modal-content card-4 animate-zoom" style="max-width:600px;border-radius: 4%;">
+  
+      <div class="center"><br>
+        <span onclick="document.getElementById('id06').style.display='none'" class="button xlarge transparent display-topright" 
+        title="Close Modal">×</span>
+        <h3>Notification settings</h3>
+      </div>
+      <form class="container">
+        <div class="section" style="text-align: center;">
+          <label>Enable Notification</label>
+          <input type="checkbox" checked><br>
+          <label>Job Alert</label>
+          <input type="checkbox"><br>
+          <button onclick="document.getElementById('id06').style.display='none';" 
+          class="button section padding black" type="button">close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<script src="js/sidebar.js"></script>
+</body>
+</html>

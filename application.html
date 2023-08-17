@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Portal</title>
+    <link rel="stylesheet" href="css/Style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {
+          font-family: "Raleway", sans-serif
+        }
+  
+        body, html {
+          height: 100%;
+          line-height: 1.8;
+        }
+        
+        .bar .button {
+          padding: 16px;
+        }
+
+        .black {
+        color: #080808!important;
+        background-color: #eee!important;
+        width:15%;
+       }
+
+       .boxing{
+        border: solid gray 2px;
+        box-sizing: content-box; 
+        margin: 20px 20px 0px 20px;
+       }
+  
+    </style>
+</head>
+<body>
+    <!--top icons -->
+<div class="top" style="height: 100%;">
+    <div class="bar white card" id="myNavbar">
+        <a href="index.html" class="bar-item button wide">Clover Health Services</a>
+        <!-- Rightside navbar links -->
+        <div class="right hide-small">
+            <a href="index.html" class="bar-item button"><i class="fa fa-home"></i> HOME</a>
+            <a class="bar-item button"><i class="fa fa-bell"></i> ALERTS</a>
+            <a style="background-color: #ccc;" href="profile.html" class="bar-item button"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a>
+        </div>
+        <!-- Hide links and open sidebar -->
+        <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="sb_open()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div style="display: flex;">
+
+        <div class="hide-small bar-block" style="width: 15%;background-color: #f2f2f2;overflow: hidden;">
+          <a href="dashboard.html" class="bar-item button pad"><i class="fa fa-dashboard"></i> DASHBOARD</a>
+      <a href="profile.html" class="bar-item button pad"><i class="fa fa-user"></i> PROFILE</a>
+      <a href="job.html" class="bar-item button pad"><i class="fa fa-briefcase"></i> JOBS</a>
+      <a style="background-color: #ccc;" href="application.html" class="bar-item button pad"><i class="fa fa-th"></i> APPLICATIONS </a>
+      <a href="documents.html" class="bar-item button pad"><i class="fa fa-file"></i> DOCUMENTS</a>
+      <a href="placement.html" class="bar-item button pad"><i
+              class="fa fa-graduation-cap"></i> PLACEMENT</a>
+      <a href="timesheet.html" class="bar-item button pad"><i class="fa fa-id-card"></i> TIMESHEET</a>
+      <a href="payroll.html" class="bar-item button pad"><i class="fa fa-dollar"></i> PAYROLL</a>
+      <a href="referral.html" class="bar-item button pad"><i class="fa fa-money"></i> REFERRAL</a>
+      <a href="setting.html" class="bar-item button pad"><i class="fa fa-gear"></i> SETTINGS</a>
+      <a href="index.html" class="bar-item button pad"><i class="fa fa-sign-out"></i> LOG OUT</a>
+        </div>
+
+        <div style="margin-left: 20px;flex: 1;">
+            <h3 style="margin-left: 20px;">APPLICATION STATUS</h3>
+            <div class="boxing">
+                <div class="flex-container">
+                    <p class="flex-item">Job1</p>
+                      <select style="margin-left: 20px;">
+                        <option>Documents pending</option>
+                        <option>Document Reviewed</option>
+                        <option>Offer Accepted</option>
+                        <option>Offer Rejected</option>
+                      </select>
+                    <button class="button black flex-item" type="submit">
+                      <i class="fa fa-user"></i>Cancel
+                    </button>
+                  </div>
+            </div>
+            <div class="boxing">
+            <div class="flex-container">
+            <p class="flex-item">Job3</p>
+            <select style="margin-left: 20px;">
+              <option>Documents Verified</option>
+              <option>Applied</option>
+              <option>Document pending</option>
+              <option>Offer Accepted</option>
+              <option>Offer Rejected</option>
+            </select>
+            <button class="button black flex-item" type="submit">
+              <i class="fa fa-user"></i>Cancel
+            </button>
+            </div>
+            </div>
+            
+            <div class="boxing">
+                <div class="flex-container">
+                    <p class="flex-item">Job4</p>
+                    <select style="margin-left: 20px;">
+                      <option>Offer Accepted</option>
+                      <option>Applied</option>
+                      <option>Document pending</option>
+                      <option>Document Reviewed</option>
+                      <option>Offer Rejected</option>
+                    </select>
+                    <button class="button black flex-item" type="submit">
+                      <i class="fa fa-user"></i>Cancel
+                    </button>
+                  </div>
+            </div>
+
+          <div class="boxing">
+            <div class="flex-container">
+                <p class="flex-item">Job5</p>
+                <select style="margin-left: 20px;">
+                  <option>Offer Rejected</option>
+                  <option>Offer Accepted</option>
+                  <option>Applied</option>
+                  <option>Document pending</option>
+                  <option>Document Reviewed</option>
+                </select>
+                <button class="button black flex-item" type="submit">
+                  <i class="fa fa-user"></i>Cancel
+                </button>
+              </div>
+        </div>
+      </div>
+    </div>  
+
+
+          <!-- apply job form-->
+            <div id="id01" class="modal">
+              <div class="modal-content card-4 animate-zoom" style="max-width:600px;border-radius: 4%;">
+            
+                <div class="center"><br>
+                  <span onclick="document.getElementById('id01').style.display='none'" class="button xlarge transparent display-topright" 
+                  title="Close Modal">×</span>
+                  <h3>Apply for this job!</h3>
+                </div>
+                <form class="container" action="/action_page.php">
+                  <div class="section" style="text-align: center;">
+                    <input class="input border margin-bottom" type="text" placeholder="Upload Resume">
+                    <button onclick="document.getElementById('id01').style.display='none';document.getElementById('id02').style.display='block'" 
+                    class="button block section padding black" type="button">Apply job</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          
+            <!-- job apply confirmation message-->
+            <div id="id02" class="modal">
+              <div class="modal-content card-4 animate-zoom" style="max-width:600px;border-radius: 4%;min-height: 35%;">
+            
+                <div class="center"><br>
+                  <span onclick="document.getElementById('id02').style.display='none'" class="button xlarge transparent display-topright" title="Close Modal">×</span>
+                  <h3><i class="fa fa-check xxlarge"></i>Thanks for applying the job</h3>
+                  <button class="button black" onclick="document.getElementById('id02').style.display='none'">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Portal</title>
+    <link rel="stylesheet" href="css/Style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {
+          font-family: "Raleway", sans-serif
+        }
+  
+        body, html {
+          height: 100%;
+          line-height: 1.8;
+        }
+  
+  
+        .bar .button {
+          padding: 16px;
+        }
+
+        table {
+            width: 120%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-left: 30px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+            
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .totals {
+            font-weight: bold;
+            color: #007bff;
+        }
+        th, td, input[type="file"], button, select {
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+        input[type="file"], button, select {
+            padding: 5px;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            
+        }
+        select {
+            width: 100%;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <!--top icons -->
+    <div class="top" style="height: 100%;">
+        <div class="bar white card" id="myNavbar">
+            <a href="index.html" class="bar-item button wide">Clover Health Services</a>
+            <!-- Rightside navbar links -->
+            <div class="right hide-small">
+                <a href="index.html" class="bar-item button"><i class="fa fa-home"></i> HOME</a>
+                <a class="bar-item button"><i class="fa fa-bell"></i> ALERTS</a>
+                <a style="background-color: #ccc;" href="profile.html" class="bar-item button"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a>
+            </div>
+            <!-- Hide links and open sidebar -->
+            <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="sb_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div style="display: flex;">
+        <div class="hide-small bar-block" style="width: 15%;background-color: #f2f2f2;overflow: hidden;height: 100%;">
+            <a href="dashboard.html" class="bar-item button pad"><i class="fa fa-dashboard"></i> DASHBOARD</a>
+      <a href="profile.html" class="bar-item button pad"><i class="fa fa-user"></i> PROFILE</a>
+      <a href="job.html" class="bar-item button pad"><i class="fa fa-briefcase"></i> JOBS</a>
+      <a href="application.html" class="bar-item button pad"><i class="fa fa-th"></i> APPLICATIONS </a>
+      <a href="documents.html" class="bar-item button pad"><i class="fa fa-file"></i> DOCUMENTS</a>
+      <a href="placement.html" class="bar-item button pad"><i
+              class="fa fa-graduation-cap"></i> PLACEMENT</a>
+      <a style="background-color: #ccc;" href="timesheet.html" class="bar-item button pad"><i class="fa fa-id-card"></i> TIMESHEET</a>
+      <a href="payroll.html" class="bar-item button pad"><i class="fa fa-dollar"></i> PAYROLL</a>
+      <a href="referral.html" class="bar-item button pad"><i class="fa fa-money"></i> REFERRAL</a>
+      <a href="setting.html" class="bar-item button pad"><i class="fa fa-gear"></i> SETTINGS</a>
+      <a href="index.html" class="bar-item button pad"><i class="fa fa-sign-out"></i> LOG OUT</a>
+        </div>
+
+        <!-- Sidebar on small screens -->
+        <nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none" id="mySidebar">
+            <a href="dashboard.html" class="bar-item button pad"><i class="fa fa-dashboard"></i> DASHBOARD</a>
+      <a href="profile.html" class="bar-item button pad"><i class="fa fa-user"></i> PROFILE</a>
+      <a href="job.html" class="bar-item button pad"><i class="fa fa-briefcase"></i> JOBS</a>
+      <a href="application.html" class="bar-item button pad"><i class="fa fa-th"></i> APPLICATIONS </a>
+      <a href="documents.html" class="bar-item button pad"><i class="fa fa-file"></i> DOCUMENTS</a>
+      <a href="placement.html" class="bar-item button pad"><i
+              class="fa fa-graduation-cap"></i> PLACEMENT</a>
+      <a href="timesheet.html" class="bar-item button pad"><i class="fa fa-id-card"></i> TIMESHEET</a>
+      <a href="payroll.html" class="bar-item button pad"><i class="fa fa-dollar"></i> PAYROLL</a>
+      <a href="referral.html" class="bar-item button pad"><i class="fa fa-money"></i> REFERRAL</a>
+      <a href="setting.html" class="bar-item button pad"><i class="fa fa-gear"></i> SETTINGS</a>
+      <a href="index.html" class="bar-item button pad"><i class="fa fa-sign-out"></i> LOG OUT</a>
+        </nav>
+
+        <div>
+        <h1 style="margin-left: 20px;">Weekly Timesheet</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Total Hours</th>
+            <th>File Upload</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>2023-07-24</td>
+            <td>Monday</td>
+            <td>07/30/2023</td>
+            <td>08/05/2023</td>
+            <td>9</td>
+            <td>
+                <input type="file" id="mondayFile" accept=".pdf, .docx">
+                <button onclick="handleFileUpload('monday');">Upload</button>
+            </td>
+            <td>
+                <select id="mondayStatus" onchange="handleStatusChange('monday')">
+                    <option value="pending">Pending</option>
+                    <option value="approved">Approved</option>
+                    <option value="rejected">Rejected</option>
+                </select>
+            </td>
+        </tr>
+        <!-- Add other days here -->
+        <tr class="totals">
+            <td colspan="6">Total Weekly Hours</td>
+            <td id="totalHours">45</td>
+        </tr>
+    </table>
+    </div>
+  </div>
+</div>
+
+<script>
+  function handleFileUpload(day) {
+      const fileInput = document.getElementById(`${day}File`);
+      const file = fileInput.files[0];
+      window.alert(`Uploaded ${file.name} on ${day}`);
+  }
+
+  function handleStatusChange(day) {
+      const statusSelect = document.getElementById(`${day}Status`);
+      const selectedStatus = statusSelect.value;
+      console.log(`Status changed to ${selectedStatus} for ${day}`);
+  }
+</script>
+<script src="js/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Portal</title>
+    <link rel="stylesheet" href="css/Style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {
+          font-family: "Raleway", sans-serif
+        }
+  
+        body, html {
+          height: 100%;
+          line-height: 1.8;
+        }
+  
+        .bar .button {
+          padding: 16px;
+        }
+
+        .custom-file-input {
+          display: inline-block;
+          position: relative;
+        }
+
+        .custom-file-input label {
+          display: inline-block;
+          cursor: pointer;
+          padding: 6px 12px;
+          background-color: #f2f2f2;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        .custom-file-input img {
+          width: 20px; /* Set the desired width of the image */
+          height: 20px; /* Set the desired height of the image */
+          margin-right: 8px;
+          vertical-align: middle;
+        }
+
+
+
+
+        
+
+        .header {
+
+        text-align: center;
+
+        padding: 20px;
+
+        }
+
+        .content {
+
+        max-width: 800px;
+
+        margin: 0 auto;
+
+        padding: 20px;
+
+        }
+
+        img {
+
+        max-width: 100%;
+
+        height: auto;
+
+        }
+
+        table {
+
+        border-collapse: collapse;
+
+        width: 100%;
+
+        }
+
+        th, td {
+
+        padding: 8px;
+
+        text-align: left;
+
+        border-bottom: 1px solid #ddd;
+
+        }
+  
+    </style>
+</head>
+<body>
+<!--top icons -->
+<div class="top" style="height: 100%;">
+  <div class="bar white card" id="myNavbar">
+      <a href="index.html" class="bar-item button wide">Clover Health Services</a>
+      <!-- Rightside navbar links -->
+      <div class="right hide-small">
+          <a href="index.html" class="bar-item button"><i class="fa fa-home"></i> HOME</a>
+          <a class="bar-item button"><i class="fa fa-bell"></i> ALERTS</a>
+          <a style="background-color: #ccc;" href="portal.html" class="bar-item button"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a>
+      </div>
+      <!-- Hide links and open sidebar -->
+      <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="sb_open()">
+          <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+  <div style="display: flex;">
+
+    <div class="hide-small bar-block" style="width: 15%;background-color: #f2f2f2;overflow: hidden;">
+      <a href="dashboard.html" class="bar-item button pad"><i class="fa fa-dashboard"></i> DASHBOARD</a>
+      <a href="profile.html" class="bar-item button pad"><i class="fa fa-user"></i> PROFILE</a>
+      <a href="job.html" class="bar-item button pad"><i class="fa fa-briefcase"></i> JOBS</a>
+      <a href="application.html" class="bar-item button pad"><i class="fa fa-th"></i> APPLICATIONS </a>
+      <a href="documents.html" class="bar-item button pad"><i class="fa fa-file"></i> DOCUMENTS</a>
+      <a href="placement.html" class="bar-item button pad"><i
+              class="fa fa-graduation-cap"></i> PLACEMENT</a>
+      <a href="timesheet.html" class="bar-item button pad"><i class="fa fa-id-card"></i> TIMESHEET</a>
+      <a href="payroll.html" class="bar-item button pad"><i class="fa fa-dollar"></i> PAYROLL</a>
+      <a style="background-color: #ccc;" href="referral.html" class="bar-item button pad"><i class="fa fa-money"></i> REFERRAL</a>
+      <a href="setting.html" class="bar-item button pad"><i class="fa fa-gear"></i> SETTINGS</a>
+      <a href="index.html" class="bar-item button pad"><i class="fa fa-sign-out"></i> LOG OUT</a>
+    </div>
+
+    <!-- Sidebar on small screens -->
+    <nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none" id="mySidebar">
+      <a href="dashboard.html" class="bar-item button pad"><i class="fa fa-dashboard"></i> DASHBOARD</a>
+      <a href="profile.html" class="bar-item button pad"><i class="fa fa-user"></i> PROFILE</a>
+      <a href="job.html" class="bar-item button pad"><i class="fa fa-briefcase"></i> JOBS</a>
+      <a href="application.html" class="bar-item button pad"><i class="fa fa-th"></i> APPLICATIONS </a>
+      <a href="documents.html" class="bar-item button pad"><i class="fa fa-file"></i> DOCUMENTS</a>
+      <a href="placement.html" class="bar-item button pad"><i
+              class="fa fa-graduation-cap"></i> PLACEMENT</a>
+      <a href="timesheet.html" class="bar-item button pad"><i class="fa fa-id-card"></i> TIMESHEET</a>
+      <a href="payroll.html" class="bar-item button pad"><i class="fa fa-dollar"></i> PAYROLL</a>
+      <a href="referral.html" class="bar-item button pad"><i class="fa fa-money"></i> REFERRAL</a>
+      <a href="setting.html" class="bar-item button pad"><i class="fa fa-gear"></i> SETTINGS</a>
+      <a href="index.html" class="bar-item button pad"><i class="fa fa-sign-out"></i> LOG OUT</a>
+    </nav>
+
+    <div class="profile-margin">
+        <h3><b>Referral</b></h3>
+        
+        <div class="header">
+
+            <img src="image/img5.png" alt="Refer a Friend">
+        
+            <h1>Refer a Friend Program</h1>
+        
+          </div>
+        
+          <div class="content">
+        
+            <p>Share our amazing products with your friends and earn rewards!</p>        
+         
+        
+            <h2>Referred Friends</h2>
+        
+            <table>
+        
+              <thead>
+        
+                <tr>
+        
+                  <th>Name</th>
+        
+                  <th>Email</th>
+        
+                  <th>Status</th>
+        
+                </tr>
+        
+              </thead>
+        
+              <tbody id="referredFriends">
+        
+                <!-- Dummy data for illustration purposes -->
+        
+                <tr>
+        
+                  <td>Nurse 1</td>
+        
+                  <td>abc@example.com</td>
+        
+                  <td>Accepted</td>
+        
+                </tr>
+        
+                <tr>
+        
+                  <td>Nurse 2</td>
+        
+                  <td>abc@example.com</td>
+        
+                  <td>Pending</td>
+        
+                </tr>
+        
+              </tbody>
+        
+            </table>
+        
+          </div>
+            
+          </div>
+        
+
+    </div>
+  </div>
+  </div>
+
+  <script src="js/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Portal</title>
+    <link rel="stylesheet" href="css/Style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body,html {
+            height: 100%;
+            line-height: 1.8;
+        }
+
+
+        .bar .button {
+            padding: 16px;
+        }
+        .panel {
+          
+          align-items: center;
+          padding: 10px;
+          background-color: #f1f1f1;
+          border-radius: 8px;
+          text-decoration: none;
+          color: #333;
+        }
+
+        .panel div {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .panel h2, .panel h3 ,.panel h4 {
+          margin: 0;
+          padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!--top icons -->
+    <div class="top" style="height: 100%;">
+        <div class="bar white card" id="myNavbar">
+            <a href="index.html" class="bar-item button wide">Clover Health Services</a>
+            <!-- Rightside navbar links -->
+            <div class="right hide-small">
+                <a href="index.html" class="bar-item button"><i class="fa fa-home"></i> HOME</a>
+                <a class="bar-item button"><i class="fa fa-bell"></i> ALERTS</a>
+                <a style="background-color: #ccc;" href="profile.html" class="bar-item button"><i
+                        class="fa fa-user-circle-o"></i> MY ACCOUNT</a>
+            </div>
+            <!-- Hide links and open sidebar -->
+            <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="sb_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <div style="display: flex;">
+            <div class="hide-small bar-block" style="width: 15%;background-color: #f2f2f2;overflow: hidden;height: 100%;">
+                <a href="dashboard.html" class="bar-item button pad"><i class="fa fa-dashboard"></i> DASHBOARD</a>
+      <a href="profile.html" class="bar-item button pad"><i class="fa fa-user"></i> PROFILE</a>
+      <a href="job.html" class="bar-item button pad"><i class="fa fa-briefcase"></i> JOBS</a>
+      <a href="application.html" class="bar-item button pad"><i class="fa fa-th"></i> APPLICATIONS </a>
+      <a href="documents.html" class="bar-item button pad"><i class="fa fa-file"></i> DOCUMENTS</a>
+      <a style="background-color: #ccc;" href="placement.html" class="bar-item button pad"><i
+              class="fa fa-graduation-cap"></i> PLACEMENT</a>
+      <a href="timesheet.html" class="bar-item button pad"><i class="fa fa-id-card"></i> TIMESHEET</a>
+      <a href="payroll.html" class="bar-item button pad"><i class="fa fa-dollar"></i> PAYROLL</a>
+      <a href="referral.html" class="bar-item button pad"><i class="fa fa-money"></i> REFERRAL</a>
+      <a href="setting.html" class="bar-item button pad"><i class="fa fa-gear"></i> SETTINGS</a>
+      <a href="index.html" class="bar-item button pad"><i class="fa fa-sign-out"></i> LOG OUT</a>
+            </div>
+
+            <!-- Sidebar on small screens -->
+            <nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none"
+                id="mySidebar">
+                <a href="dashboard.html" class="bar-item button pad"><i class="fa fa-dashboard"></i> DASHBOARD</a>
+      <a href="profile.html" class="bar-item button pad"><i class="fa fa-user"></i> PROFILE</a>
+      <a href="job.html" class="bar-item button pad"><i class="fa fa-briefcase"></i> JOBS</a>
+      <a href="application.html" class="bar-item button pad"><i class="fa fa-th"></i> APPLICATIONS </a>
+      <a href="documents.html" class="bar-item button pad"><i class="fa fa-file"></i> DOCUMENTS</a>
+      <a href="placement.html" class="bar-item button pad"><i
+              class="fa fa-graduation-cap"></i> PLACEMENT</a>
+      <a href="timesheet.html" class="bar-item button pad"><i class="fa fa-id-card"></i> TIMESHEET</a>
+      <a href="payroll.html" class="bar-item button pad"><i class="fa fa-dollar"></i> PAYROLL</a>
+      <a href="referral.html" class="bar-item button pad"><i class="fa fa-money"></i> REFERRAL</a>
+      <a href="setting.html" class="bar-item button pad"><i class="fa fa-gear"></i> SETTINGS</a>
+      <a href="index.html" class="bar-item button pad"><i class="fa fa-sign-out"></i> LOG OUT</a>
+            </nav>
+
+                 <div class="profile-margin" >
+                <h1 style="margin-left: 20px;"> Placements</h1>
+                
+
+                <div class="panel card-4 flex margin-top">
+                  
+                    <div >
+                        <h2 style="font-family: 'Times New Roman', Times, serif;" ><b>&nbsp; Hospital Name: AP Multispeciality Hospital</b> </h2>
+                        
+                        <h3 style="font-family: 'Times New Roman', Times, serif; margin-left: 5px;">&nbsp; Location:US </h3>
+                        <h3 style="font-family: 'Times New Roman', Times, serif;margin-left: 5px">&nbsp; Contract From: 11/06/2022 </h3>
+                        <h3 style="font-family: 'Times New Roman', Times, serif;margin-left: 5px">&nbsp; Speciality: Ambulatory care,Radiology </h3>
+                      
+                    </div>
+                    <div  style=" margin-left:20%;margin-top: 4%;">
+                        <h3 style="font-family: 'Times New Roman', Times, serif;">&nbsp; Shift: Night </h3>
+                        <h3 style="font-family: 'Times New Roman', Times, serif;">&nbsp; Contract To: 11/06/2023 </h3>
+                        <h3 style="font-family: 'Times New Roman', Times, serif;">&nbsp; Status:
+                            <select>
+                                <option> working</option>
+                                <option> completed</option>
+                                <option> Not Yet Started</option>
+                            </select>
+                        </h3>
+                        
+                       
+                    </div>
+                    
+                </div>
+                <br>
+               <div class="panel card-4 flex margin-top">
+                  
+                    <div >
+                        <h2 style="font-family: 'Times New Roman', Times, serif;" ><b>&nbsp; Hospital Name: KV Multispeciality Hospital</b> </h2>
+                        
+                        <h3 style="font-family: 'Times New Roman', Times, serif; margin-left: 5px;">&nbsp; Location:US </h3>
+                        <h3 style="font-family: 'Times New Roman', Times, serif;margin-left: 5px">&nbsp; Contract From: 11/06/2022 </h3>
+                        <h3 style="font-family: 'Times New Roman', Times, serif;margin-left: 5px">&nbsp; Speciality: Ambulatory care,Radiology </h3>
+                        
+                       
+                       
+                       
+                        
+                    </div>
+                    <div  style=" margin-left:20%;margin-top: 4%;">
+                        <h3 style="font-family: 'Times New Roman', Times, serif;">&nbsp; Shift: Night </h3>
+                        <h3 style="font-family: 'Times New Roman', Times, serif;">&nbsp; Contract To: 11/08/2022 </h3>
+                        <h3 style="font-family: 'Times New Roman', Times, serif;">&nbsp; Status: 
+                            <select>
+                                <option > completed</option>
+                                <option > Not Yet Started</option>
+                                <option > working</option>
+                            </select>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            
+        
+    </div>
+    </div>
+
+    <script>
+
+    </script>
+    <script src="sidebar.js"></script>
+</body>
+
+</html>

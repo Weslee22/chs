@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nurse Portal</title>
+    <link rel="stylesheet" href="css/Style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {
+          font-family: "Raleway", sans-serif
+        }
+  
+        body, html {
+          height: 100%;
+          line-height: 1.8;
+        }
+  
+        .bar .button {
+          padding: 16px;
+        }
+
+        .custom-file-input {
+          display: inline-block;
+          position: relative;
+        }
+
+        .custom-file-input label {
+          display: inline-block;
+          cursor: pointer;
+          padding: 6px 12px;
+          background-color: #f2f2f2;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        .custom-file-input img {
+          width: 20px; 
+          height: 20px; 
+          margin-right: 8px;
+          vertical-align: middle;
+        }
+
+  
+    </style>
+</head>
+<body>
+<!--top icons -->
+<div class="top" style="height: 100%;">
+  <div class="bar white card" id="myNavbar">
+      <a href="index.html" class="bar-item button wide">Clover Health Services</a>
+      <!-- Rightside navbar links -->
+      <div class="right hide-small">
+          <a href="index.html" class="bar-item button"><i class="fa fa-home"></i> HOME</a>
+          <a class="bar-item button"><i class="fa fa-bell"></i> ALERTS</a>
+          <a style="background-color: #ccc;" href="portal.html" class="bar-item button"><i class="fa fa-user-circle-o"></i> MY ACCOUNT</a>
+      </div>
+      <!-- Hide links and open sidebar -->
+      <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium" onclick="sb_open()">
+          <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+  <div style="display: flex;">
+
+    <div class="hide-small bar-block" style="width: 15%;background-color: #f2f2f2;overflow: hidden;">
+      <a href="dashboard.html" class="bar-item button pad"><i class="fa fa-dashboard"></i> DASHBOARD</a>
+      <a href="profile.html" class="bar-item button pad"><i class="fa fa-user"></i> PROFILE</a>
+      <a href="job.html" class="bar-item button pad"><i class="fa fa-briefcase"></i> JOBS</a>
+      <a href="application.html" class="bar-item button pad"><i class="fa fa-th"></i> APPLICATIONS </a>
+      <a style="background-color: #ccc;" href="documents.html" class="bar-item button pad"><i class="fa fa-file"></i> DOCUMENTS</a>
+      <a href="placement.html" class="bar-item button pad"><i
+              class="fa fa-graduation-cap"></i> PLACEMENT</a>
+      <a href="timesheet.html" class="bar-item button pad"><i class="fa fa-id-card"></i> TIMESHEET</a>
+      <a href="payroll.html" class="bar-item button pad"><i class="fa fa-dollar"></i> PAYROLL</a>
+      <a href="referral.html" class="bar-item button pad"><i class="fa fa-money"></i> REFERRAL</a>
+      <a href="setting.html" class="bar-item button pad"><i class="fa fa-gear"></i> SETTINGS</a>
+      <a href="index.html" class="bar-item button pad"><i class="fa fa-sign-out"></i> LOG OUT</a>
+    </div>
+
+    <!-- Sidebar on small screens -->
+    <nav class="sidebar bar-block black card animate-left hide-medium hide-large" style="display:none" id="mySidebar">
+      <a href="dashboard.html" class="bar-item button pad"><i class="fa fa-dashboard"></i> DASHBOARD</a>
+      <a href="profile.html" class="bar-item button pad"><i class="fa fa-user"></i> PROFILE</a>
+      <a href="job.html" class="bar-item button pad"><i class="fa fa-briefcase"></i> JOBS</a>
+      <a href="application.html" class="bar-item button pad"><i class="fa fa-th"></i> APPLICATIONS </a>
+      <a href="documents.html" class="bar-item button pad"><i class="fa fa-file"></i> DOCUMENTS</a>
+      <a href="placement.html" class="bar-item button pad"><i
+              class="fa fa-graduation-cap"></i> PLACEMENT</a>
+      <a href="timesheet.html" class="bar-item button pad"><i class="fa fa-id-card"></i> TIMESHEET</a>
+      <a href="payroll.html" class="bar-item button pad"><i class="fa fa-dollar"></i> PAYROLL</a>
+      <a href="referral.html" class="bar-item button pad"><i class="fa fa-money"></i> REFERRAL</a>
+      <a href="setting.html" class="bar-item button pad"><i class="fa fa-gear"></i> SETTINGS</a>
+      <a href="index.html" class="bar-item button pad"><i class="fa fa-sign-out"></i> LOG OUT</a>
+    </nav>
+
+    <div class="profile-margin">
+        <h3>DOCUMENTS</h3>
+        
+        <div class="panel card-4">
+          <p> Credential</p>
+          <div onclick="document.getElementById('id07').style.display = 'block'" class="fa fa-plus button pad right black"> Upload</div>
+        </div><br>
+          
+        <div class="panel card-4 ">
+          <p> Hospital Specific Documents</p>
+          <div onclick="document.getElementById('id07').style.display = 'block'" class="fa fa-plus button pad right black"> Re-Upload</div>
+          <div class="fa fa-eye button pad right" style="margin-right: 5px;background-color: #ccc;">View</div>
+        </div><br>
+
+        <div class="panel card-4">
+          <p> HR Documents</p>
+          <div onclick="document.getElementById('id07').style.display = 'block'" class="fa fa-plus button pad right black"> Upload</div>
+        </div><br>
+
+        <div class="panel card-4">
+          <p> IT Docs</p>
+          <div onclick="document.getElementById('id07').style.display = 'block'" class="fa fa-plus button pad right black"> Upload</div>
+        </div><br>
+
+        <div class="panel card-4">
+          <p> Medical</p>
+          <div onclick="document.getElementById('id07').style.display = 'block'" class="fa fa-plus button pad right black"> Upload</div>
+        </div><br>
+
+        <div class="panel card-4">
+          <p>  Policy Documents</p>
+          <div onclick="document.getElementById('id07').style.display = 'block'" class="fa fa-plus button pad right black"> Upload</div>
+        </div><br>
+
+        <div class="panel card-4">
+          <p> Profile</p>
+          <div onclick="document.getElementById('id07').style.display = 'block'" class="fa fa-plus button pad right black"> Upload</div>
+        </div><br>
+
+        <div class="panel card-4">
+          <p> Reporting Instructions</p>
+          <div onclick="document.getElementById('id07').style.display = 'block'" class="fa fa-plus button pad right black"> Upload</div>
+        </div><br>
+
+        <div class="panel card-4">
+          <p> State Forms</p>
+          <div onclick="document.getElementById('id07').style.display = 'block'" class="fa fa-plus button pad right black"> Upload</div>
+        </div><br><br>
+
+    </div>
+  </div>
+  </div>
+
+  <!-- upload documents modal-->
+  <div id="id07" class="modal">
+    <div class="modal-content card-4 animate-zoom" style="max-width:600px;border-radius: 4%;">
+      <div class="center"><br>
+        <span onclick="document.getElementById('id07').style.display='none'" class="button xlarge transparent display-topright" 
+        title="Close Modal">x</span>
+        <h3>Upload document</h3>
+      </div>
+      <form class="container">
+        <div class="section" style="text-align: center;">
+            <img src="img2.png" alt="Upload Resume" height="100" width="100"><br>
+            <input id="resumeFile" class="input border margin-bottom" type="file" accept=".pdf,.doc,.docx"><br>
+            <button class="black pad button" type="button" onclick="document.getElementById('id07').style.display='none'"> Upload</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/sidebar.js"></script>
+</body>
+</html>
